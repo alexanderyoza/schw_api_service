@@ -6,7 +6,7 @@ Easily manage authentication, account information, and market data requests with
 
 # 💯 Motivation
 
-This service is meant to be a lightweight, easy to use solution to easily access my account in market data without needing to build a setup from scratch. It includes the areas that are most important for me when experimenting, researching, or learning about the stock market.
+This service is meant to be a lightweight, easy to use solution to easily access account and market data without needing to build a setup from scratch each time. It includes the areas that are most necessary to me when experimenting, researching, or learning about the stock market without needing to spend too much time sorting through large requests and responses.
 
 # 🚀 Quick Start
 
@@ -30,11 +30,34 @@ ACCOUNT_NUMBER=<Account Number (GET with https://api.schwabapi.com/trader/v1/acc
 ACCOUNT_HASH=<Account Hash (GET with https://api.schwabapi.com/trader/v1/accounts/accountNumbers)>
 ```
 
-### Usage
+### 3. Using the service
 
-Once your
+#### 1. Initialize the SchwApiService to begin auth
 
-References:
+```
+  schw_api_service = SchwApiService()
+```
+
+#### 2. If you need to login to get a refresh token
+
+- Login using your PORTFOLIO ACCOUNT information, not your developer login.
+- Accept the terms and link your preferred account
+  - Note: this script is currently only setup to manage one account at a time
+- You should be directed to a not found page
+  - Copy the url from the page you are on into the terminal url prompt
+- Your tokens should be ready for service usage
+
+#### More info
+
+- Read docs in client/account and client/market_data
+- Read through [Charles Schwab API Developer Documentation](https://developer.schwab.com/products)
+
+### Coming soon...
+
+- Websocket data
+- Get options price data
+
+### References:
 
 - [Charles Schwab API Developer Portal](https://developer.schwab.com/products)
 - [tylerbowers - github repo](https://github.com/tylerebowers/Schwabdev/tree/main)
