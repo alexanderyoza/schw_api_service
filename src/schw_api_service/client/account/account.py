@@ -3,7 +3,7 @@ from typing import Optional
 
 from dotenv import load_dotenv
 
-from utils.requests import delete, get, post, put
+from ...utils.requests import delete, get, post, put
 
 load_dotenv()
 
@@ -100,6 +100,7 @@ class Account:
             raise Exception(response.text)
 
     def format_order(
+        self,
         symbol: str,
         order_type: str,
         quantity: int,
@@ -143,6 +144,7 @@ class Account:
         return post_order_payload
 
     def format_leg(
+        self,
         order_leg_type: str,
         instruction: str,
         asset_type: str,

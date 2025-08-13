@@ -3,7 +3,7 @@ from datetime import datetime
 
 from dotenv import load_dotenv
 
-from utils.requests import get, post
+from ...utils.requests import get, post
 
 load_dotenv()
 

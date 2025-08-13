@@ -13,7 +13,8 @@ from dotenv import load_dotenv
 from filelock import FileLock
 from loguru import logger
 
-from auth import authorize, refresh
+from .authorize import authorize
+from .refresh_token import refresh
 
 STORE_PATH = Path(".secrets/tokens.enc.json")
 LOCK_PATH = str(STORE_PATH) + ".lock"
