@@ -54,7 +54,6 @@ ACCOUNT_HASH=<Account Hash (GET with https://api.schwabapi.com/trader/v1/account
 
 ### Coming soon...
 
-- Websocket data
 - Get options price data
 
 ### References:
