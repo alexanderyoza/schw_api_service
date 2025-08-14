@@ -48,7 +48,7 @@ class MarketData:
         period: int,
         period_type: str,
         frequency: str,
-        frequency_type: str,
+        frequency_type: int,
         start_date: datetime,
         end_date: datetime,
         need_extended_hours_data: bool = False,

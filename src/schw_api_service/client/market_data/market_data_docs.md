@@ -66,7 +66,7 @@ market_data_url - api url
   - year: [daily, weekly, monthly]
   - ytd: [daily, weekly]
 
-- frequencyType: str
+- frequencyType: int
   - (valid values based on frequencyType)
   - minute: [1, 5, 10, 15, 30]
   - daily: [1]

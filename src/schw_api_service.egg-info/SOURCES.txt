@@ -15,5 +15,6 @@ src/schw_api_service/client/account/__init__.py
 src/schw_api_service/client/account/account.py
 src/schw_api_service/client/market_data/__init__.py
 src/schw_api_service/client/market_data/market_data.py
+src/schw_api_service/client/market_data/subscription_codes.py
 src/schw_api_service/utils/__init__.py
 src/schw_api_service/utils/requests.py
