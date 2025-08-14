@@ -11,6 +11,7 @@ Requires-Dist: python-dotenv>=1.0
 Requires-Dist: cryptography>=41
 Requires-Dist: filelock>=3.12
 Requires-Dist: loguru>=0.7
+Require-Dist: websockets>=14.0
 
 # Charles Schwab API Service
 
@@ -68,7 +69,6 @@ ACCOUNT_HASH=<Account Hash (GET with https://api.schwabapi.com/trader/v1/account
 
 ### Coming soon...
 
-- Websocket data
 - Get options price data
 
 ### References:
