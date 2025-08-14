@@ -43,10 +43,6 @@ market_data_url - api url
 
 ## get_historical_prices()
 
-###
-
-get historical candles
-
 ### params
 
 - symbol: str
@@ -88,3 +84,54 @@ get historical candles
 ## returns
 
 - See online docs
+
+## init_stream_prices()
+
+### description
+
+Initializes class values for websocket streaming
+
+### params
+
+- callback: function
+  - param: message: dict
+- service: str
+  - [LEVELONE_EQUITIES, LEVELONE_OPTIONS, LEVELONE_FUTURES, LEVELONE_FUTURES_OPTIONS, LEVELONE_FOREX, NYSE_BOOK, NASDAQ_BOOK, OPTIONS_BOOK, CHART_EQUITY, CHART_FUTURES, SCREENER_EQUITY, SCREENER_OPTION]
+- symbols: str
+  - 'ticker,ticker,ticker'
+  - 'aapl,msft'
+- fields: str
+  - '1,2,4,5'
+  - See online docs or codes in client/market_data file
+
+### returns
+
+none
+
+## subscribe_to_prices()
+
+### description
+
+Subscribes to the prices given in init_stream_prices() and streams them to the callback function
+
+### params
+
+none
+
+### returns
+
+none
+
+## close_stream_prices()
+
+### description
+
+Logs out of subscription
+
+### params
+
+none
+
+### returns
+
+none
