@@ -49,8 +49,8 @@ class MarketData:
         period_type: str,
         frequency: int,
         frequency_type: str,
-        start_date: datetime,
-        end_date: datetime,
+        start_date: datetime = None,
+        end_date: datetime = None,
         need_extended_hours_data: bool = False,
         need_previous_close: bool = False,
     ) -> dict:
@@ -61,8 +61,8 @@ class MarketData:
             "periodType": period_type,
             "frequency": frequency,
             "frequencyType": frequency_type,
-            "startDate": int(start_date.timestamp() * 1000),
-            "endDate": int(end_date.timestamp() * 1000),
+            "startDate": int(start_date.timestamp() * 1000) if start_date else None,
+            "endDate": int(end_date.timestamp() * 1000) if end_date else None,
             "needExtendedHoursData": need_extended_hours_data,
             "needPreviousClose": need_previous_close,
         }
