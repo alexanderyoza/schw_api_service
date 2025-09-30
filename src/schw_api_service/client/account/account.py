@@ -19,21 +19,22 @@ class Account:
         response = get(url, auth=True)
         if response.ok:
             data = response.json()
-            return {
-                "cashBalance": data["securitiesAccount"]["currentBalances"][
-                    "cashBalance"
-                ],
-                "availableFunds": data["securitiesAccount"]["currentBalances"][
-                    "availableFunds"
-                ],
-                "buyingPower": data["securitiesAccount"]["currentBalances"][
-                    "buyingPower"
-                ],
-                "dayTradingBuyingPower": data["securitiesAccount"]["currentBalances"][
-                    "dayTradingBuyingPower"
-                ],
-                "equity": data["securitiesAccount"]["currentBalances"]["equity"],
-            }
+            return data
+            # return {
+            #     "cashBalance": data["securitiesAccount"]["currentBalances"][
+            #         "cashBalance"
+            #     ],
+            #     "availableFunds": data["securitiesAccount"]["currentBalances"][
+            #         "availableFunds"
+            #     ],
+            #     "buyingPower": data["securitiesAccount"]["currentBalances"][
+            #         "buyingPower"
+            #     ],
+            #     "dayTradingBuyingPower": data["securitiesAccount"]["currentBalances"][
+            #         "dayTradingBuyingPower"
+            #     ],
+            #     "equity": data["securitiesAccount"]["currentBalances"]["equity"],
+            # }
         else:
             raise Exception(response.text)
 
