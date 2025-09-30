@@ -16,7 +16,7 @@ class Account:
 
     def get_account_info(self):
         url = f"{self.account_url}/accounts/{self.account_hash}"
-        response = get(url, auth=True)
+        response = get(url, params={"fields": "positions"}, auth=True)
         if response.ok:
             data = response.json()
             return data
